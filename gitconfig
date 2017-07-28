@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = subl -n -w  >/dev/null 2>&1
+	editor = nano
 
 [alias]
   co = checkout
@@ -49,3 +49,6 @@
 [user]
 	email = guillaume.cabanel@gmail.com
 	name = Guillaume Cabanel
+	signingkey = 5BD9B3A5055BD368
+[commit]
+	gpgsign = true
