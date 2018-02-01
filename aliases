@@ -6,8 +6,28 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 
-alias wagon=sl
-alias atom=atom .
-alias nemo=nemo .
-alias vps=ssh guillaume@137.74.169.152
-alias weelab=ssh weelab@5.196.1.138
+alias wagon='sl'
+alias atom='atom .'
+alias nemo='nemo .'
+alias rates='ruby ~/cryptocurrency/get_rates.rb'
+alias terminate='function _terminate(){ pgrep -f $1 | xargs kill -9 };_terminate'
+
+# SSH connections
+alias vps='ssh guillaume@137.74.169.152'
+alias weelab='ssh weelab@5.196.1.138'
+
+# Web radios
+alias meuh='cvlc --daemon http://icepe12.infomaniak.ch/radiomeuh-128.mp3 && echo radiomeuh | cowsay'
+alias djam='cvlc --daemon http://www.djamradio.com/sound'
+alias sympa='cvlc --daemon http://radio2.pro-fhi.net:9095/stream2/stream'
+
+# Games
+alias tetris='bastet'
+alias minecraft='nohup java -jar /usr/local/Minecraft.jar & clear'
+
+# Projects
+alias artrepro='cd ~/pro/apps/tchukuchuk/artrepro/'
+alias passevent='cd ~/pro/apps/pguegan/multi/'
+alias invoicit='cd ~/pro/apps/guillaumecabanel/invoicit'
+
+export PATH="./node_modules/.bin:$PATH"
