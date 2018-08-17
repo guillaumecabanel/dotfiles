@@ -36,3 +36,5 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export PATH="$PATH:./node_modules/.bin"

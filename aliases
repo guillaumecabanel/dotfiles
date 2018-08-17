@@ -13,15 +13,13 @@ alias nemo="nemo ."
 
 # ssh to vps
 alias vps="ssh guillaume@137.74.169.152"
+alias weelab="ssh weelab@5.196.1.138"
 
-alias hedgenews="cd ~/pro/apps/hedgenews && atom"
-
-alias timestamp="date +%s | xclip -sel clip && echo '== Timestamp copied =='"
+alias timestamp="date +%s | xclip -sel clip && echo 'Press ctrl + v to paste timestamp.'"
 
 alias terminate='function _terminate(){ pgrep -f $1 | xargs kill -9};_terminate'
 
-alias bamboo="~/Downloads/atlassian-bamboo-6.0.3/bin/start-bamboo.sh -fg"
-
-alias weelab="ssh weelab@5.196.1.138"
-
 alias clever_env_sync="spring stop ; rails runner -e production 'puts Figaro::Rails::Application.new.configuration.map { |key, value| \"#{key}=#{value}\" }.join(\"\n\")' | clever env import"
+
+# Projects
+alias ensemble1job="cd ~/pro/apps/ensemble1job/app.ensemble1job.fr/"
