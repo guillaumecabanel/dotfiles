@@ -19,8 +19,6 @@ alias timestamp="date +%s | xclip -sel clip && echo 'Press ctrl + v to paste tim
 
 alias terminate='function _terminate(){ pgrep -f $1 | xargs kill -9};_terminate'
 
-alias bulma_docs='cd /home/guillaumecabanel/pro/apps/bulma/bulma/docs && jekyll serve --incremental --config _config.local.yml'
-
 # Projects
 alias projects="echo 'ensemble1job\invoicit\nvolailles\nseazon'"
 alias ensemble1job="cd ~/pro/apps/ensemble1job/app.ensemble1job.fr/"
@@ -29,5 +27,4 @@ alias volailles="cd ~/pro/apps/poupart/transformation-volailles/"
 alias seazon="cd ~/pro/apps/guillaumecabanel/seazon_at_dojo/"
 
 # BDD dump
-alias dump_ensemble1job="~/pro/scripts/dump_ensemble1job.sh"
-alias dump_seazon="~/pro/scripts/dump_seazon.sh"
+dump_ensemble1job.shdump_ensemble1job.sh
