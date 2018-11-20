@@ -49,6 +49,8 @@
 [user]
 	email = guillaume.cabanel@gmail.com
 	name = Guillaume Cabanel
-	signingkey = 5BD9B3A5055BD368
+	signingkey = F8017DF7F6244373
 [commit]
-	gpgsign = true
+	gpgsign = false
+[gpg]
+	program = gpg2

@@ -8,7 +8,7 @@ ZSH_THEME="robbyrussell"
 if [ -x "$(command -v rbenv)" ]; then RPS1='[$(ruby_prompt_info)]$EPS1'; fi
 
 # Useful plugins for Rails development with Sublime Text
-plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
+plugins=(gitfast rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
 
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
@@ -24,12 +24,6 @@ export PATH="./bin:${PATH}:/usr/local/sbin"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1"
-
-# React Native
-# export ANDROID_HOME=${HOME}/Android/Sdk
-# export PATH=${PATH}:${ANDROID_HOME}/tools
-# export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
