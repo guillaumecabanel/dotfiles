@@ -1,0 +1,6 @@
+# tools
+alias code="code ."
+
+# projects
+alias potion="cd ~/pro/apps/kuartz-org/potion"
+alias sunday="cd ~/pro/apps/kuartz-org/sunday"
