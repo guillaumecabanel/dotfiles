@@ -3,4 +3,8 @@ alias code="code ."
 
 # projects
 alias potion="cd ~/pro/apps/kuartz-org/potion"
+alias t_potion="tmux a -t potion"
 alias sunday="cd ~/pro/apps/kuartz-org/sunday"
+alias t_sunday="tmux a -t sunday"
+alias compass="cd ~/pro/apps/kuartz-org/compass-rails"
+

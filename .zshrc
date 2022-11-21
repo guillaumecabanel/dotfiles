@@ -2,7 +2,10 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="guillaumecabanel"
 
-plugins=(git common-aliases zsh-syntax-highlighting ssh-agent)
+plugins=(git gitfast common-aliases last-working-dir zsh-syntax-highlighting ssh-agent)
+
+# ssh-agent settings
+zstyle :omz:plugins:ssh-agent identities clevercloud gitlab id_ed25519
 
 source $ZSH/oh-my-zsh.sh
 
