@@ -1,0 +1,9 @@
+[core]
+  pager = less -FRSX
+  editor = nano
+
+[pull]
+  rebase = false
+
+[init]
+  defaultBranch = main
