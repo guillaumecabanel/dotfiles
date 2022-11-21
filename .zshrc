@@ -5,7 +5,7 @@ ZSH_THEME="guillaumecabanel"
 plugins=(git gitfast common-aliases last-working-dir zsh-syntax-highlighting ssh-agent)
 
 # ssh-agent settings
-zstyle :omz:plugins:ssh-agent identities clevercloud gitlab id_ed25519
+zstyle :omz:plugins:ssh-agent identities id_ed25519 clevercloud gitlab
 
 source $ZSH/oh-my-zsh.sh
 
