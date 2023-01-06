@@ -1,0 +1,13 @@
+theme = "dark_high_contrast"
+
+[editor]
+rulers = [121]
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.file-picker]
+hidden = false
+
