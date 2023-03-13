@@ -8,3 +8,5 @@ alias sunday="cd ~/pro/apps/kuartz-org/sunday"
 alias t_sunday="tmux a -t sunday"
 alias compass="cd ~/pro/apps/kuartz-org/compass-rails"
 
+# Clever-Cloud
+alias clever_ssh="ssh -i ~/.ssh/clevercloud -t ssh@sshgateway-clevercloud-customers.services.clever-cloud.com"
