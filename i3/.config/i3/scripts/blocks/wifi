@@ -1,0 +1,19 @@
+#!/bin/bash
+SSID=$(nmcli -t -f active,ssid dev wifi 2>/dev/null | grep '^yes:' | cut -d: -f2)
+if [ -n "$SSID" ]; then
+    echo "󰖩"
+else
+    echo "󰖪"
+fi
+
+case $BLOCK_BUTTON in
+    1)
+        if [ -n "$SSID" ]; then
+            IP=$(hostname -I | awk '{print $1}')
+            notify-send "WiFi" "SSID: $SSID\nIP: $IP" -t 3000 -r 9991
+        else
+            notify-send "WiFi" "Disconnected" -t 3000 -r 9991
+        fi
+        ;;
+    3) alacritty --title i3block-wlctl -e wlctl ;;
+esac

@@ -1,0 +1,25 @@
+#!/bin/bash
+POWERED=$(bluetoothctl show 2>/dev/null | grep -c "Powered: yes")
+
+if [ "$POWERED" -eq 0 ]; then
+    echo "󰂲"
+else
+    CONNECTED=$(bluetoothctl devices Connected 2>/dev/null)
+    if [ -n "$CONNECTED" ]; then
+        echo "󰂱"
+    else
+        echo "󰂯"
+    fi
+fi
+
+case $BLOCK_BUTTON in
+    1)
+        CONNECTED=$(bluetoothctl devices Connected 2>/dev/null | sed 's/^Device [^ ]* //')
+        if [ -n "$CONNECTED" ]; then
+            notify-send "Bluetooth" "$CONNECTED" -t 3000 -r 9993
+        else
+            notify-send "Bluetooth" "No connected devices" -t 3000 -r 9993
+        fi
+        ;;
+    3) alacritty --title i3block-bluetui -e bluetui ;;
+esac

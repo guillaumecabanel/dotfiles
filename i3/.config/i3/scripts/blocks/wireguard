@@ -1,0 +1,2 @@
+#!/bin/bash
+[ -d /proc/sys/net/ipv4/conf/wg-home ] && echo " wg-home"

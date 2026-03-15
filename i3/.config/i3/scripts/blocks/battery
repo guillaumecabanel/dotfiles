@@ -1,0 +1,33 @@
+#!/bin/bash
+BAT=/sys/class/power_supply/BAT0
+[ -d "$BAT" ] || exit 0
+
+CAPACITY=$(cat "$BAT/capacity")
+STATUS=$(cat "$BAT/status")
+
+if [ "$STATUS" = "Charging" ]; then
+    ICON="󱐋"
+elif [ "$CAPACITY" -ge 90 ]; then
+    ICON="󰁹"
+elif [ "$CAPACITY" -ge 70 ]; then
+    ICON="󰂁"
+elif [ "$CAPACITY" -ge 50 ]; then
+    ICON="󰁿"
+elif [ "$CAPACITY" -ge 30 ]; then
+    ICON="󰁽"
+elif [ "$CAPACITY" -ge 10 ]; then
+    ICON="󰁻"
+else
+    ICON="󰂎"
+fi
+
+echo "$ICON"
+
+case $BLOCK_BUTTON in
+    1)
+        TIME=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 2>/dev/null | grep -oP 'time to (empty|full):\s+\K.*')
+        MSG="Battery: ${CAPACITY}%"
+        [ -n "$TIME" ] && MSG="$MSG — $TIME remaining"
+        notify-send "Battery" "$MSG" -t 3000 -r 9990
+        ;;
+esac

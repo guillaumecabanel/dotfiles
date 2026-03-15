@@ -1,0 +1,41 @@
+[global]
+    monitor = 0
+    follow = mouse
+    width = 300
+    height = (0, 100)
+    origin = top-right
+    offset = (10, 50)
+    scale = 0
+    notification_limit = 5
+    progress_bar = true
+    progress_bar_height = 14
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 250
+    padding = 8
+    horizontal_padding = 8
+    text_icon_padding = 0
+    frame_width = 2
+    frame_color = "#aaaaaa"
+    separator_color = frame
+    font = Monospace 10
+    format = "<b>%s</b>\n%b"
+    timeout = 5
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    highlight = "#89b4fa"
+
+[urgency_low]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    timeout = 5
+
+[urgency_normal]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    timeout = 10
+
+[urgency_critical]
+    background = "#1e1e2e"
+    foreground = "#f38ba8"
+    timeout = 0

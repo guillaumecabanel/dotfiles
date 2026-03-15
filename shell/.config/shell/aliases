@@ -1,0 +1,24 @@
+# ls with eza
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+
+alias code='code .'
+alias lg='lazygit'
+alias ld='lazydocker'
+
+alias cursor='launch_cursor .'
+alias update_cursor='curl -sSL https://links.kuartz.fr/install_cursor | bash'
+
+alias up='sudo apt update && sudo apt upgrade -y && update_cursor && sudo apt autoremove && sudo apt autoclean && rustup update'
+
+alias rc='rails console'
+alias cop='bundle exec rubocop'
+
+alias n8n='docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n'
+
+alias radio_sympa="cvlc -d https://radio11.pro-fhi.net/flux-aryfnfye2/stream"
+alias lofi="cvlc -d --no-video https://1a-1791.com/live/1n1ugl24/slot-49/7ttm-lexc_360p/chunklist.m3u8"
+
+alias wifi='wlctl'

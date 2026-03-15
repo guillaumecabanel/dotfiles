@@ -1,0 +1,36 @@
+[core]
+	editor = nano
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+        tags = true
+[commit]
+	gpgsign = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+
+
+# Better default
+# cf. https://blog.gitbutler.com/how-git-core-devs-configure-git/
+
+[tag]
+        sort = version:refname
+[diff]
+        # algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+[include]
+        path = ~/.gitconfig.local
