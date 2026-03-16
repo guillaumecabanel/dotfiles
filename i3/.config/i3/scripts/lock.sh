@@ -4,10 +4,10 @@
 if i3lock --version 2>&1 | grep -qP "\.\bc\b"; then
   i3lock \
     --color=1a1b26 \
-    --inside-color=1a1b2600 \
-    --ring-color=7aa2f7 \
-    --keyhl-color=33ccff \
-    --bshl-color=ff9e64 \
+    --inside-color=1a1b26cc \
+    --ring-color=7aa2f7ff \
+    --keyhl-color=7dcfffff \
+    --bshl-color=ff9e64ff \
     --separator-color=00000000 \
     --insidever-color=7aa2f788 \
     --ringver-color=9ece6a \
@@ -26,8 +26,9 @@ if i3lock --version 2>&1 | grep -qP "\.\bc\b"; then
     --wrong-text="!" \
     --noinput-text="" \
     --radius=120 \
-    --ring-width=8
+    --ring-width=8 \
+    "$@"
 else
   # Fallback to plain i3lock
-  i3lock --color 1a1b26
+  i3lock --color 1a1b26 "$@"
 fi
