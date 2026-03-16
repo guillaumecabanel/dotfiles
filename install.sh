@@ -11,19 +11,6 @@ if ! command -v stow &>/dev/null; then
     sudo apt install -y stow
 fi
 
-# Remove old debready symlinks if they exist
-debready_links=(
-    "$HOME/.config/alacritty"
-    "$HOME/.config/shell"
-    "$HOME/.config/starship.toml"
-)
-for link in "${debready_links[@]}"; do
-    if [ -L "$link" ]; then
-        echo "Removing debready symlink: $link"
-        rm "$link"
-    fi
-done
-
 # Unstow first to cleanly handle re-runs (avoids tree-folding conflicts)
 cd "$DOTFILES_DIR"
 for pkg in "${PACKAGES[@]}"; do
