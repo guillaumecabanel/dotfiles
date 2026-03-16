@@ -68,5 +68,4 @@ if [ ! -f "$GTK_SETTINGS" ]; then
 gtk-application-prefer-dark-theme=1
 GTEOF
 fi
-
 echo "Done! All packages stowed."

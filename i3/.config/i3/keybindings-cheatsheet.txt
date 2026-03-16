@@ -24,5 +24,7 @@ Super + F1 | Stop radio
 Super + F12 | Toggle dark/light mode
 Super + Menu | Toggle VPN
 Super + Escape | Power menu
+Super + T | Toggle tiling/floating
+Super + Shift + G | Toggle gaps
 Super + Shift + C | Reload config
 Super + Shift + R | Restart i3

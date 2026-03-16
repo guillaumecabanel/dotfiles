@@ -21,7 +21,12 @@ else
     ICON="󰂎"
 fi
 
-echo "$ICON"
+if [ "$CAPACITY" -le 10 ] && [ "$STATUS" != "Charging" ]; then
+    echo "<span foreground='#f7768e'>$ICON</span>"
+    notify-send -u critical -r 9990 "Battery Critical" "${CAPACITY}% remaining — plug in now"
+else
+    echo "$ICON"
+fi
 
 case $BLOCK_BUTTON in
     1)
