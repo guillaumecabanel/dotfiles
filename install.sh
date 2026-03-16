@@ -24,12 +24,25 @@ for link in "${debready_links[@]}"; do
     fi
 done
 
+# Unstow first to cleanly handle re-runs (avoids tree-folding conflicts)
+cd "$DOTFILES_DIR"
+for pkg in "${PACKAGES[@]}"; do
+    if [ -d "$pkg" ]; then
+        stow -t "$HOME" -D "$pkg" 2>/dev/null || true
+    fi
+done
+
 # Back up conflicting real files
 backup_needed=false
 for pkg in "${PACKAGES[@]}"; do
     while IFS= read -r -d '' file; do
         rel="${file#"$DOTFILES_DIR/$pkg/"}"
         target="$HOME/$rel"
+        # Skip if target resolves into the dotfiles dir (already managed by stow)
+        if [ -e "$target" ]; then
+            real_target="$(readlink -f "$target")"
+            case "$real_target" in "$DOTFILES_DIR/"*) continue ;; esac
+        fi
         if [ -e "$target" ] && [ ! -L "$target" ]; then
             backup_needed=true
             backup_path="$BACKUP_DIR/$rel"
