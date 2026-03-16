@@ -1,7 +1,7 @@
 #!/bin/bash
 # Tokyo Night themed lock screen (requires i3lock-color)
 
-if i3lock --version 2>&1 | grep -q "i3lock-color"; then
+if i3lock --version 2>&1 | grep -qP "\.\bc\b"; then
   i3lock \
     --color=1a1b26 \
     --inside-color=1a1b2600 \
