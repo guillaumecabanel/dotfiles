@@ -1,2 +1,2 @@
 #!/bin/bash
-[ -f /tmp/music_lofi ] && echo " Lofi"
+[ -f /tmp/music_lofi ] && echo " Lofi"

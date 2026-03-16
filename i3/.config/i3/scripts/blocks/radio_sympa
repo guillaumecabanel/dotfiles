@@ -1,2 +1,2 @@
 #!/bin/bash
-[ -f /tmp/music_radio_sympa ] && echo " Sympa"
+[ -f /tmp/music_radio_sympa ] && echo " Sympa"
