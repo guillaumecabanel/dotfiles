@@ -1,0 +1,28 @@
+Super + Enter | Open terminal
+Super + B | Open browser
+Super + Space | App launcher
+Alt + V | Clipboard history
+Super + N | Show last notification
+Alt + F4 | Kill focused window
+Super + Shift + A | Kill focused window
+Super + ← ↓ ↑ → | Focus left/down/up/right
+Super + Shift + ← ↓ ↑ → | Move window left/down/up/right
+Super + Q | Focus parent container
+Super + 1–0 | Switch to workspace 1–10
+Super + Shift + 1–0 | Move container to workspace 1–10
+Super + X | Move workspace to next output
+Super + F | Toggle fullscreen
+Super + Shift + Space | Toggle floating
+Super + H | Split horizontal
+Super + V | Split vertical
+Super + S | Layout: stacking
+Super + Z | Layout: tabbed
+Super + E | Layout: toggle split
+Super + R | Resize mode
+Super + F3 | Music menu
+Super + F1 | Stop radio
+Super + F12 | Toggle dark/light mode
+Super + Menu | Toggle VPN
+Super + Escape | Power menu
+Super + Shift + C | Reload config
+Super + Shift + R | Restart i3
