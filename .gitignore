@@ -1,2 +1,5 @@
 i3/.config/i3/.theme
 gtk/.config/gtk-3.0/bookmarks
+dunst/.config/dunst/dunstrc
+gtk/.config/gtk-3.0/settings.ini
+x11/.fehbg

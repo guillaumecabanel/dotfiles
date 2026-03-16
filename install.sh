@@ -53,4 +53,20 @@ for pkg in "${PACKAGES[@]}"; do
     stow -t "$HOME" "$pkg"
 done
 
+# Bootstrap generated config files (not tracked in git)
+DUNSTRC="$HOME/.config/dunst/dunstrc"
+if [ ! -f "$DUNSTRC" ]; then
+    echo "Generating default dunstrc (dark theme)..."
+    cp "$DOTFILES_DIR/dunst/.config/dunst/dunstrc.dark" "$DUNSTRC"
+fi
+
+GTK_SETTINGS="$HOME/.config/gtk-3.0/settings.ini"
+if [ ! -f "$GTK_SETTINGS" ]; then
+    echo "Generating default GTK settings (dark theme)..."
+    cat > "$GTK_SETTINGS" << 'GTEOF'
+[Settings]
+gtk-application-prefer-dark-theme=1
+GTEOF
+fi
+
 echo "Done! All packages stowed."
