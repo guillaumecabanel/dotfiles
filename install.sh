@@ -2,7 +2,7 @@
 set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
-PACKAGES=(i3 dunst rofi alacritty i3status autorandr gtk shell zsh git x11)
+PACKAGES=(i3 dunst rofi alacritty autorandr gtk shell zsh git x11)
 BACKUP_DIR="$HOME/.dotfiles-backup-$(date +%Y%m%d-%H%M%S)"
 
 # Check/install stow
